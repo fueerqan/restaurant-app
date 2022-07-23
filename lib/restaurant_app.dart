@@ -13,13 +13,13 @@ class RestaurantApp extends StatelessWidget {
       androidBuilder: MaterialApp(
         title: _getTitle,
         theme: getThemeData,
-        initialRoute: "/",
+        initialRoute: _initialRoute,
         routes: getRoutes,
       ),
       iOSBuilder: CupertinoApp(
         title: _getTitle,
         theme: getCupertinoThemeData,
-        initialRoute: "/",
+        initialRoute: _initialRoute,
         routes: getRoutes,
       ),
     );
