@@ -16,7 +16,7 @@ class Restaurant {
   final String desciption;
   final String pictureId;
   final String city;
-  final double rating;
+  final num rating;
   final RestaurantMenu menus;
 
   Restaurant.fromJson(Map<String, dynamic>? json)
