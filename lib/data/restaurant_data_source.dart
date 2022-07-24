@@ -18,9 +18,14 @@ class RestaurantDataSource {
 
     final Map<String, dynamic> parsedJson = jsonDecode(mData);
 
-    List<Restaurant> restaurantList = (parsedJson["restaurants"] as List)
+    return (parsedJson["restaurants"] as List)
         .map((item) => Restaurant.fromJson(item))
         .toList();
-    return restaurantList;
+  }
+
+  static Future<Restaurant> fetchRestaurantById(
+      BuildContext context, String id) async {
+    final List<Restaurant> restaurantList = await fetchRestaurantList(context);
+    return restaurantList.firstWhere((element) => element.id == id);
   }
 }
