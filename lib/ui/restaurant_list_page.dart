@@ -47,7 +47,12 @@ class RestaurantListPage extends StatelessWidget {
                       shrinkWrap: true,
                       itemBuilder: (context, index) => RestaurantItem(
                         restaurant: restaurantData[index],
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.of(context).pushNamed(
+                            "/detail",
+                            arguments: restaurantData[index].id,
+                          );
+                        },
                       ),
                       separatorBuilder: (context, index) =>
                           const SizedBox(height: 8),
