@@ -66,7 +66,11 @@ class _RestaurantListPageState extends State<RestaurantListPage> {
 
   Widget _buildBody(BuildContext context) => Container(
         padding: const EdgeInsets.only(
-            top: kToolbarHeight, left: 16, right: 16, bottom: 0),
+          top: kToolbarHeight,
+          left: 16,
+          right: 16,
+          bottom: 0,
+        ),
         child: Column(
           mainAxisSize: MainAxisSize.max,
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -97,6 +101,7 @@ class _RestaurantListPageState extends State<RestaurantListPage> {
 
                   return Expanded(
                     child: ListView.separated(
+                      padding: const EdgeInsets.only(top: 16, bottom: 16),
                       shrinkWrap: true,
                       itemBuilder: (context, index) => RestaurantItem(
                         restaurant: restaurantData[index],
