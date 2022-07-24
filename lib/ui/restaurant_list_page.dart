@@ -1,6 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:restaurant_app/data/model/restaurant.dart';
 import 'package:restaurant_app/data/restaurant_data_source.dart';
+import 'package:restaurant_app/widgets/platforms/platform_widget_builder.dart';
 import 'package:restaurant_app/widgets/restaurant_item.dart';
 
 class RestaurantListPage extends StatelessWidget {
@@ -8,8 +10,13 @@ class RestaurantListPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: _buildBody(context),
+    return PlatformWidgetBuilder(
+      iOSBuilder: CupertinoPageScaffold(
+        child: _buildBody(context),
+      ),
+      androidBuilder: Scaffold(
+        body: _buildBody(context),
+      ),
     );
   }
 
