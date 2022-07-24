@@ -14,10 +14,18 @@ class RestaurantMenu {
 }
 
 class RestaurantMenuItem {
-  RestaurantMenuItem({required this.name});
+  RestaurantMenuItem({
+    required this.name,
+    required this.imageUrl,
+    required this.price,
+  });
 
   final String name;
+  final String imageUrl;
+  final String price;
 
   RestaurantMenuItem.fromJson(Map<String, dynamic>? json)
-      : name = json?["name"] ?? "";
+      : name = json?["name"] ?? "",
+        imageUrl = json?["imageUrl"] ?? "",
+        price = json?["price"] ?? "";
 }
