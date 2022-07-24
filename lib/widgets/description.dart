@@ -15,7 +15,7 @@ class _DescriptionState extends State<Description> {
 
   bool isCollapsed = true;
 
-  void onToggle() {
+  void _onToggle() {
     setState(() {
       isCollapsed = !isCollapsed;
     });
@@ -48,11 +48,11 @@ class _DescriptionState extends State<Description> {
           if (widget.description.length > minLengthToShowEllipsis)
             PlatformWidgetBuilder(
               androidBuilder: InkWell(
-                onTap: onToggle,
+                onTap: _onToggle,
                 child: _buildDescriptionToggle(context, isCollapsed),
               ),
               iOSBuilder: GestureDetector(
-                onTap: onToggle,
+                onTap: _onToggle,
                 child: _buildDescriptionToggle(context, isCollapsed),
               ),
             )

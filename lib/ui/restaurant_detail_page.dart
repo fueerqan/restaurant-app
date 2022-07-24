@@ -14,7 +14,7 @@ class RestaurantDetailPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // get restaurant id
+    /// get restaurant id
     final restaurantId = ModalRoute.of(context)!.settings.arguments as String;
 
     return PlatformWidgetBuilder(
