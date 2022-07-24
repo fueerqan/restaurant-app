@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:restaurant_app/data/model/restaurant.dart';
 import 'package:restaurant_app/data/model/restaurant_menu.dart';
 import 'package:restaurant_app/data/restaurant_data_source.dart';
+import 'package:restaurant_app/widgets/description.dart';
 import 'package:restaurant_app/widgets/icon_label.dart';
 import 'package:restaurant_app/widgets/platforms/platform_widget_builder.dart';
 import 'package:restaurant_app/widgets/restaurant_menu_item.dart' as RestoMenu;
@@ -82,7 +83,7 @@ class RestaurantDetailPage extends StatelessWidget {
                     ),
                     top: 8.0,
                   ),
-                  ..._buildDescription(context, restaurant.desciption),
+                  Description(description: restaurant.desciption),
                   ..._buildMenus(context, "Foods", restaurant.menus.foods),
                   ..._buildMenus(context, "Drinks", restaurant.menus.drinks),
                 ],
@@ -118,27 +119,6 @@ class RestaurantDetailPage extends StatelessWidget {
       ),
       child: child,
     );
-  }
-
-  List<Widget> _buildDescription(BuildContext context, String description) {
-    return [
-      _paddingWidget(
-        Text(
-          "Description",
-          style: Theme.of(context).textTheme.headline6,
-        ),
-        top: 24.0,
-      ),
-      _paddingWidget(
-        Text(
-          description,
-          textAlign: TextAlign.justify,
-          style: Theme.of(context).textTheme.bodyMedium,
-        ),
-        top: 8.0,
-        bottom: 24.0,
-      ),
-    ];
   }
 
   List<Widget> _buildMenus(
