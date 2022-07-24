@@ -14,62 +14,65 @@ class RestaurantItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        SizedBox(
-          width: MediaQuery.of(context).size.width / 3,
-          child: ClipRRect(
-            borderRadius: const BorderRadius.all(Radius.circular(8)),
-            child: Image.network(restaurant.pictureId),
+    return GestureDetector(
+      onTap: onTap,
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          SizedBox(
+            width: MediaQuery.of(context).size.width / 3,
+            child: ClipRRect(
+              borderRadius: const BorderRadius.all(Radius.circular(10)),
+              child: Image.network(restaurant.pictureId),
+            ),
           ),
-        ),
-        const SizedBox(width: 8),
-        Expanded(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Text(
-                restaurant.name,
-                style: Theme.of(context).textTheme.headline6?.copyWith(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18,
-                    ),
-              ),
-              const SizedBox(height: 8),
-              IconLabel(
-                icon: const Icon(
-                  Icons.location_on,
-                  color: Colors.grey,
-                ),
-                label: Text(
-                  restaurant.city,
-                  style: Theme.of(context).textTheme.bodyText1?.copyWith(
-                        fontWeight: FontWeight.w300,
-                        color: Colors.grey,
+          const SizedBox(width: 8),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  restaurant.name,
+                  style: Theme.of(context).textTheme.headline6?.copyWith(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18,
                       ),
-                  overflow: TextOverflow.ellipsis,
-                  maxLines: 1,
                 ),
-              ),
-              const SizedBox(height: 8),
-              IconLabel(
-                icon: const Icon(Icons.star),
-                label: Text(
-                  restaurant.rating.toString(),
-                  style: Theme.of(context).textTheme.bodyText1?.copyWith(
-                        fontWeight: FontWeight.w500,
-                        color: Colors.grey[600],
-                      ),
-                  overflow: TextOverflow.ellipsis,
-                  maxLines: 1,
+                const SizedBox(height: 8),
+                IconLabel(
+                  icon: const Icon(
+                    Icons.location_on,
+                    color: Colors.grey,
+                  ),
+                  label: Text(
+                    restaurant.city,
+                    style: Theme.of(context).textTheme.bodyText1?.copyWith(
+                          fontWeight: FontWeight.w300,
+                          color: Colors.grey,
+                        ),
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 1,
+                  ),
                 ),
-              ),
-            ],
-          ),
-        )
-      ],
+                const SizedBox(height: 8),
+                IconLabel(
+                  icon: const Icon(Icons.star),
+                  label: Text(
+                    restaurant.rating.toString(),
+                    style: Theme.of(context).textTheme.bodyText1?.copyWith(
+                          fontWeight: FontWeight.w500,
+                          color: Colors.grey[600],
+                        ),
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 1,
+                  ),
+                ),
+              ],
+            ),
+          )
+        ],
+      ),
     );
   }
 }
