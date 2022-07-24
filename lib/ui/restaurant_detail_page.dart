@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:restaurant_app/data/model/restaurant.dart';
 import 'package:restaurant_app/data/model/restaurant_menu.dart';
@@ -45,7 +46,10 @@ class RestaurantDetailPage extends StatelessWidget {
           Restaurant restaurant = snapshot.data as Restaurant;
 
           return Padding(
-            padding: const EdgeInsets.only(top: kTextTabBarHeight),
+            padding: EdgeInsets.only(
+                top: (defaultTargetPlatform == TargetPlatform.iOS)
+                    ? kTextTabBarHeight
+                    : 0),
             child: SingleChildScrollView(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -124,12 +128,15 @@ class RestaurantDetailPage extends StatelessWidget {
   List<Widget> _buildMenus(
       BuildContext context, String title, List<RestaurantMenuItem> menus) {
     return [
-      _paddingWidget(Text(
-        title,
-        style: Theme.of(context).textTheme.headline6,
-      )),
+      _paddingWidget(
+          Text(
+            title,
+            style: Theme.of(context).textTheme.headline6,
+          ),
+          top: 16),
       _paddingWidget(
         GridView.count(
+          padding: const EdgeInsets.only(top: 16),
           crossAxisCount: 2,
           crossAxisSpacing: 8,
           mainAxisSpacing: 8,
