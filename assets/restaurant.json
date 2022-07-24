@@ -10,57 +10,91 @@
         "menus": {
           "foods": [
             {
-              "name": "Paket rosemary"
+              "name": "Paket rosemary",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Toastie salmon"
+              "name": "Toastie salmon",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Bebek crepes"
+              "name": "Bebek crepes",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Salad lengkeng"
+              "name": "Salad lengkeng",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             }
           ],
           "drinks": [
             {
-              "name": "Es krim"
+              "name": "Es krim",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Sirup"
+              "name": "Sirup",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Jus apel"
+              "name": "Jus apel",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Jus jeruk"
+              "name": "Jus jeruk",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Coklat panas"
+              "name": "Coklat panas",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Air"
+              "name": "Air",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Es kopi"
+              "name": "Es kopi",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Jus alpukat"
+              "name": "Jus alpukat",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Jus mangga"
+              "name": "Jus mangga",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Teh manis"
+              "name": "Teh manis",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Kopi espresso"
+              "name": "Kopi espresso",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Minuman soda"
+              "name": "Minuman soda",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Jus tomat"
+              "name": "Jus tomat",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             }
           ]
         }
@@ -75,63 +109,101 @@
         "menus": {
           "foods": [
             {
-              "name": "Kari kacang dan telur"
+              "name": "Kari kacang dan telur",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Ikan teri dan roti"
+              "name": "Ikan teri dan roti",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "roket penne"
+              "name": "roket penne",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Salad lengkeng"
+              "name": "Salad lengkeng",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Tumis leek"
+              "name": "Tumis leek",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Salad yuzu"
+              "name": "Salad yuzu",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Sosis squash dan mint"
+              "name": "Sosis squash dan mint",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             }
           ],
           "drinks": [
             {
-              "name": "Jus tomat"
+              "name": "Jus tomat",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Minuman soda"
+              "name": "Minuman soda",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Jus apel"
+              "name": "Jus apel",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Jus mangga"
+              "name": "Jus mangga",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Es krim"
+              "name": "Es krim",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Kopi espresso"
+              "name": "Kopi espresso",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Jus alpukat"
+              "name": "Jus alpukat",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Coklat panas"
+              "name": "Coklat panas",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Es kopi"
+              "name": "Es kopi",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Teh manis"
+              "name": "Teh manis",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Sirup"
+              "name": "Sirup",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Jus jeruk"
+              "name": "Jus jeruk",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             }
           ]
         }
@@ -146,66 +218,106 @@
         "menus": {
           "foods": [
             {
-              "name": "Salad lengkeng"
+              "name": "Salad lengkeng",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Sosis squash dan mint"
+              "name": "Sosis squash dan mint",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Toastie salmon"
+              "name": "Toastie salmon",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Salad yuzu"
+              "name": "Salad yuzu",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Matzo farfel"
+              "name": "Matzo farfel",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Kari terong"
+              "name": "Kari terong",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "roket penne"
+              "name": "roket penne",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Napolitana"
+              "name": "Napolitana",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Daging Sapi"
+              "name": "Daging Sapi",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Bebek crepes"
+              "name": "Bebek crepes",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Sup Kohlrabi"
+              "name": "Sup Kohlrabi",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Ikan teri dan roti"
+              "name": "Ikan teri dan roti",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Tumis leek"
+              "name": "Tumis leek",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             }
           ],
           "drinks": [
             {
-              "name": "Kopi espresso"
+              "name": "Kopi espresso",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Coklat panas"
+              "name": "Coklat panas",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Jus jeruk"
+              "name": "Jus jeruk",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Jus apel"
+              "name": "Jus apel",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Minuman soda"
+              "name": "Minuman soda",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Air"
+              "name": "Air",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Es kopi"
+              "name": "Es kopi",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             }
           ]
         }
@@ -220,84 +332,136 @@
         "menus": {
           "foods": [
             {
-              "name": "Salad lengkeng"
+              "name": "Salad lengkeng",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Kari terong"
+              "name": "Kari terong",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Sosis squash dan mint"
+              "name": "Sosis squash dan mint",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Napolitana"
+              "name": "Napolitana",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Salad yuzu"
+              "name": "Salad yuzu",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Tumis leek"
+              "name": "Tumis leek",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Ikan teri dan roti"
+              "name": "Ikan teri dan roti",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Kari kacang dan telur"
+              "name": "Kari kacang dan telur",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Toastie salmon"
+              "name": "Toastie salmon",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Bebek crepes"
+              "name": "Bebek crepes",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Paket rosemary"
+              "name": "Paket rosemary",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Sup Kohlrabi"
+              "name": "Sup Kohlrabi",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "roket penne"
+              "name": "roket penne",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             }
           ],
           "drinks": [
             {
-              "name": "Minuman soda"
+              "name": "Minuman soda",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Es teh"
+              "name": "Es teh",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Jus tomat"
+              "name": "Jus tomat",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Coklat panas"
+              "name": "Coklat panas",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Jus jeruk"
+              "name": "Jus jeruk",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Air"
+              "name": "Air",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Kopi espresso"
+              "name": "Kopi espresso",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Es kopi"
+              "name": "Es kopi",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Sirup"
+              "name": "Sirup",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Jus alpukat"
+              "name": "Jus alpukat",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Jus mangga"
+              "name": "Jus mangga",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Jus apel"
+              "name": "Jus apel",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Es krim"
+              "name": "Es krim",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             }
           ]
         }
@@ -312,60 +476,96 @@
         "menus": {
           "foods": [
             {
-              "name": "Daging Sapi"
+              "name": "Daging Sapi",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Bebek crepes"
+              "name": "Bebek crepes",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Toastie salmon"
+              "name": "Toastie salmon",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Kari terong"
+              "name": "Kari terong",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Paket rosemary"
+              "name": "Paket rosemary",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Salad lengkeng"
+              "name": "Salad lengkeng",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             }
           ],
           "drinks": [
             {
-              "name": "Sirup"
+              "name": "Sirup",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Jus mangga"
+              "name": "Jus mangga",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Es teh"
+              "name": "Es teh",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Jus jeruk"
+              "name": "Jus jeruk",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Teh manis"
+              "name": "Teh manis",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Kopi espresso"
+              "name": "Kopi espresso",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Es kopi"
+              "name": "Es kopi",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Minuman soda"
+              "name": "Minuman soda",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Jus alpukat"
+              "name": "Jus alpukat",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Jus tomat"
+              "name": "Jus tomat",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Es krim"
+              "name": "Es krim",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Coklat panas"
+              "name": "Coklat panas",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             }
           ]
         }
@@ -380,51 +580,81 @@
         "menus": {
           "foods": [
             {
-              "name": "Kari kacang dan telur"
+              "name": "Kari kacang dan telur",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Toastie salmon"
+              "name": "Toastie salmon",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Matzo farfel"
+              "name": "Matzo farfel",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Napolitana"
+              "name": "Napolitana",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Salad yuzu"
+              "name": "Salad yuzu",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Sosis squash dan mint"
+              "name": "Sosis squash dan mint",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Daging Sapi"
+              "name": "Daging Sapi",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             }
           ],
           "drinks": [
             {
-              "name": "Minuman soda"
+              "name": "Minuman soda",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Jus apel"
+              "name": "Jus apel",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Air"
+              "name": "Air",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Jus jeruk"
+              "name": "Jus jeruk",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Es krim"
+              "name": "Es krim",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Es teh"
+              "name": "Es teh",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Jus tomat"
+              "name": "Jus tomat",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Coklat panas"
+              "name": "Coklat panas",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             }
           ]
         }
@@ -439,66 +669,106 @@
         "menus": {
           "foods": [
             {
-              "name": "Sup Kohlrabi"
+              "name": "Sup Kohlrabi",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Paket rosemary"
+              "name": "Paket rosemary",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Tumis leek"
+              "name": "Tumis leek",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Kari terong"
+              "name": "Kari terong",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "roket penne"
+              "name": "roket penne",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Sosis squash dan mint"
+              "name": "Sosis squash dan mint",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Salad lengkeng"
+              "name": "Salad lengkeng",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             }
           ],
           "drinks": [
             {
-              "name": "Es kopi"
+              "name": "Es kopi",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Air"
+              "name": "Air",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Jus apel"
+              "name": "Jus apel",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Kopi espresso"
+              "name": "Kopi espresso",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Teh manis"
+              "name": "Teh manis",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Jus jeruk"
+              "name": "Jus jeruk",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Es teh"
+              "name": "Es teh",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Coklat panas"
+              "name": "Coklat panas",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Jus mangga"
+              "name": "Jus mangga",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Es krim"
+              "name": "Es krim",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Jus alpukat"
+              "name": "Jus alpukat",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Sirup"
+              "name": "Sirup",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Minuman soda"
+              "name": "Minuman soda",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             }
           ]
         }
@@ -513,42 +783,66 @@
         "menus": {
           "foods": [
             {
-              "name": "Sup Kohlrabi"
+              "name": "Sup Kohlrabi",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Toastie salmon"
+              "name": "Toastie salmon",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Tumis leek"
+              "name": "Tumis leek",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Ikan teri dan roti"
+              "name": "Ikan teri dan roti",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Kari kacang dan telur"
+              "name": "Kari kacang dan telur",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             }
           ],
           "drinks": [
             {
-              "name": "Jus alpukat"
+              "name": "Jus alpukat",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Jus jeruk"
+              "name": "Jus jeruk",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Coklat panas"
+              "name": "Coklat panas",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Es teh"
+              "name": "Es teh",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Teh manis"
+              "name": "Teh manis",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Es krim"
+              "name": "Es krim",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Jus mangga"
+              "name": "Jus mangga",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             }
           ]
         }
@@ -563,57 +857,91 @@
         "menus": {
           "foods": [
             {
-              "name": "Tumis leek"
+              "name": "Tumis leek",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Paket rosemary"
+              "name": "Paket rosemary",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "roket penne"
+              "name": "roket penne",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Daging Sapi"
+              "name": "Daging Sapi",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Napolitana"
+              "name": "Napolitana",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Salad lengkeng"
+              "name": "Salad lengkeng",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Matzo farfel"
+              "name": "Matzo farfel",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Kari kacang dan telur"
+              "name": "Kari kacang dan telur",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Sosis squash dan mint"
+              "name": "Sosis squash dan mint",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Kari terong"
+              "name": "Kari terong",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             }
           ],
           "drinks": [
             {
-              "name": "Jus apel"
+              "name": "Jus apel",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Air"
+              "name": "Air",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Teh manis"
+              "name": "Teh manis",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Jus mangga"
+              "name": "Jus mangga",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Es teh"
+              "name": "Es teh",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Jus alpukat"
+              "name": "Jus alpukat",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Jus tomat"
+              "name": "Jus tomat",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             }
           ]
         }
@@ -628,81 +956,131 @@
         "menus": {
           "foods": [
             {
-              "name": "Matzo farfel"
+              "name": "Matzo farfel",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Tumis leek"
+              "name": "Tumis leek",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Daging Sapi"
+              "name": "Daging Sapi",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Napolitana"
+              "name": "Napolitana",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Kari kacang dan telur"
+              "name": "Kari kacang dan telur",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Kari terong"
+              "name": "Kari terong",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Ikan teri dan roti"
+              "name": "Ikan teri dan roti",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Bebek crepes"
+              "name": "Bebek crepes",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "roket penne"
+              "name": "roket penne",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Salad lengkeng"
+              "name": "Salad lengkeng",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Paket rosemary"
+              "name": "Paket rosemary",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Salad yuzu"
+              "name": "Salad yuzu",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             }
           ],
           "drinks": [
             {
-              "name": "Coklat panas"
+              "name": "Coklat panas",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Jus apel"
+              "name": "Jus apel",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Sirup"
+              "name": "Sirup",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Kopi espresso"
+              "name": "Kopi espresso",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Teh manis"
+              "name": "Teh manis",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Es teh"
+              "name": "Es teh",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Es kopi"
+              "name": "Es kopi",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Jus jeruk"
+              "name": "Jus jeruk",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Air"
+              "name": "Air",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Jus mangga"
+              "name": "Jus mangga",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Jus tomat"
+              "name": "Jus tomat",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Minuman soda"
+              "name": "Minuman soda",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             },
             {
-              "name": "Es krim"
+              "name": "Es krim",
+              "imageUrl": "https://restaurant-api.dicoding.dev/images/medium/14",
+              "price": "IDR 15.000"
             }
           ]
         }
