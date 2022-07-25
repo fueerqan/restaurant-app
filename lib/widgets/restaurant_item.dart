@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:restaurant_app/data/model/local/restaurant.dart';
+import 'package:restaurant_app/data/model/ui/restaurant.dart';
 import 'package:restaurant_app/widgets/icon_label.dart';
 
 class RestaurantItem extends StatelessWidget {
@@ -9,7 +9,7 @@ class RestaurantItem extends StatelessWidget {
     required this.onTap,
   }) : super(key: key);
 
-  final RestaurantLocal restaurant;
+  final RestaurantUiModel restaurant;
   final VoidCallback onTap;
 
   @override
@@ -23,7 +23,7 @@ class RestaurantItem extends StatelessWidget {
             width: MediaQuery.of(context).size.width / 3,
             child: ClipRRect(
               borderRadius: const BorderRadius.all(Radius.circular(10)),
-              child: Image.network(restaurant.pictureId),
+              child: Image.network(restaurant.pictureUrl),
             ),
           ),
           const SizedBox(width: 8),

@@ -8,8 +8,8 @@ class RestaurantListUsecase {
 
     if (!networkResponse.error) {
       final List<RestaurantNetwork> restaurantList =
-          ((networkResponse.data?["data"] ?? []) as List<Map<String, dynamic>>)
-              .map((e) => RestaurantNetwork.fromJson(e))
+          ((networkResponse.data?["data"] ?? []) as List)
+              .map((e) => RestaurantNetwork.fromJson(e as Map<String, dynamic>))
               .toList();
 
       return restaurantList

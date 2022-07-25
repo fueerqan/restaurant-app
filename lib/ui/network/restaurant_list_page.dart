@@ -1,8 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:restaurant_app/data/model/local/restaurant.dart';
-import 'package:restaurant_app/data/model/ui/restaurant.dart';
-import 'package:restaurant_app/data/restaurant_data_source.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:restaurant_app/blocs/list/list_bloc.dart';
 import 'package:restaurant_app/widgets/platforms/platform_widget_builder.dart';
 import 'package:restaurant_app/widgets/restaurant_item.dart';
 
@@ -92,31 +91,43 @@ class _RestaurantListPageState extends State<RestaurantListPage> {
             ),
             const SizedBox(height: 16),
             _buildSearchView(),
-            FutureBuilder(
-              future: RestaurantDataSource.fetchRestaurantList(context,
-                  keywords: keywords),
-              builder: (context, snapshot) {
-                if (snapshot.connectionState == ConnectionState.done) {
-                  List<RestaurantLocal> restaurantData =
-                      snapshot.data as List<RestaurantLocal>;
-
+            BlocProvider(
+              create: (_) => ListBloc()..add(FetchRestaurantListEvent()),
+              child:
+                  BlocBuilder<ListBloc, ListState>(builder: (context, state) {
+                if (state is ListLoadingState) {
+                  return const Expanded(
+                    child: Center(child: CircularProgressIndicator()),
+                  );
+                } else if (state is ListFailedState) {
+                  return Expanded(
+                    child: Center(
+                      child: Text(
+                        state.message,
+                        style: const TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  );
+                } else if (state is ListSuccessState) {
                   return Expanded(
                     child: ListView.separated(
                       padding: const EdgeInsets.only(top: 16, bottom: 16),
                       shrinkWrap: true,
                       itemBuilder: (context, index) => RestaurantItem(
-                        restaurant:
-                            RestaurantUiModel.fromLocal(restaurantData[index]),
+                        restaurant: state.restaurantList[index],
                         onTap: () {
                           Navigator.of(context).pushNamed(
                             "/detail",
-                            arguments: restaurantData[index].id,
+                            arguments: state.restaurantList[index].id,
                           );
                         },
                       ),
                       separatorBuilder: (context, index) =>
                           const SizedBox(height: 8),
-                      itemCount: restaurantData.length,
+                      itemCount: state.restaurantList.length,
                     ),
                   );
                 } else {
@@ -124,7 +135,7 @@ class _RestaurantListPageState extends State<RestaurantListPage> {
                     child: Center(child: CircularProgressIndicator()),
                   );
                 }
-              },
+              }),
             ),
           ],
         ),
