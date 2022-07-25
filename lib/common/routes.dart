@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:restaurant_app/ui/restaurant_detail_page.dart';
-import 'package:restaurant_app/ui/restaurant_list_page.dart';
+import 'package:restaurant_app/common/data_source.dart';
+import 'package:restaurant_app/ui/local/restaurant_detail_page.dart';
+import 'package:restaurant_app/ui/local/restaurant_list_page.dart' as Local;
+import 'package:restaurant_app/ui/network/restaurant_list_page.dart' as Network;
 
-Map<String, WidgetBuilder> get getRoutes => {
-      "/": (context) => const RestaurantListPage(),
-      "/detail": (context) => const RestaurantDetailPage(),
+Map<String, WidgetBuilder> getRoutes(DataSource source) => {
+      "/": (context) => (source == DataSource.local)
+          ? const Local.RestaurantListPage()
+          : const Network.RestaurantListPage(),
+      "/local-detail": (context) => const RestaurantDetailPage(),
     };
