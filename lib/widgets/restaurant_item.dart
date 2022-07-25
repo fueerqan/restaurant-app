@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:restaurant_app/data/model/restaurant.dart';
+import 'package:restaurant_app/data/model/local/restaurant.dart';
 import 'package:restaurant_app/widgets/icon_label.dart';
 
 class RestaurantItem extends StatelessWidget {

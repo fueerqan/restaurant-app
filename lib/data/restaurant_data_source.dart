@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/widgets.dart';
-import 'package:restaurant_app/data/model/restaurant.dart';
+import 'package:restaurant_app/data/model/local/restaurant.dart';
 
 class RestaurantDataSource {
   static Future<String?> _loadJson(BuildContext context) {

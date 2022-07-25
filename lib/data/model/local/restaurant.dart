@@ -1,4 +1,6 @@
-import 'package:restaurant_app/data/model/restaurant_menu.dart';
+
+
+import 'package:restaurant_app/data/model/local/restaurant_menu.dart';
 
 class Restaurant {
   Restaurant({
