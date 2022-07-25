@@ -1,5 +1,7 @@
-class NetworkResponse {
-  NetworkResponse({
+import 'package:equatable/equatable.dart';
+
+class NetworkResponse extends Equatable {
+  const NetworkResponse({
     required this.error,
     required this.message,
     required this.count,
@@ -20,7 +22,10 @@ class NetworkResponse {
         founded = json?["founded"] ?? 0,
         data = (json?[dataKey] != null)
             ? {
-                "data": json?["dataKey"],
+                "data": json?[dataKey],
               }
             : null;
+
+  @override
+  List<Object?> get props => [error, message, count, founded, data];
 }
