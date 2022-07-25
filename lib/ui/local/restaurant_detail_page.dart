@@ -27,7 +27,7 @@ class RestaurantDetailPage extends StatelessWidget {
     );
   }
 
-  FutureBuilder<Restaurant> _buildBody(
+  FutureBuilder<RestaurantLocal> _buildBody(
       BuildContext context, String restaurantId) {
     return FutureBuilder(
       future: RestaurantDataSource.fetchRestaurantById(context, restaurantId),
@@ -43,7 +43,7 @@ class RestaurantDetailPage extends StatelessWidget {
             );
           }
 
-          Restaurant restaurant = snapshot.data as Restaurant;
+          RestaurantLocal restaurant = snapshot.data as RestaurantLocal;
 
           return Padding(
             padding: EdgeInsets.only(
@@ -126,7 +126,7 @@ class RestaurantDetailPage extends StatelessWidget {
   }
 
   List<Widget> _buildMenus(
-      BuildContext context, String title, List<RestaurantMenuItem> menus) {
+      BuildContext context, String title, List<RestaurantMenuItemLocal> menus) {
     return [
       _paddingWidget(
           Text(

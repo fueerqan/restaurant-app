@@ -96,8 +96,8 @@ class _RestaurantListPageState extends State<RestaurantListPage> {
                   keywords: keywords),
               builder: (context, snapshot) {
                 if (snapshot.connectionState == ConnectionState.done) {
-                  List<Restaurant> restaurantData =
-                      snapshot.data as List<Restaurant>;
+                  List<RestaurantLocal> restaurantData =
+                      snapshot.data as List<RestaurantLocal>;
 
                   return Expanded(
                     child: ListView.separated(
