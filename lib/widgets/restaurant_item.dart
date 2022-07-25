@@ -9,7 +9,7 @@ class RestaurantItem extends StatelessWidget {
     required this.onTap,
   }) : super(key: key);
 
-  final Restaurant restaurant;
+  final RestaurantLocal restaurant;
   final VoidCallback onTap;
 
   @override

@@ -8,8 +8,8 @@ class RestaurantDataSource {
     return DefaultAssetBundle.of(context).loadString('assets/restaurant.json');
   }
 
-  static List<Restaurant> filterByKeywords(
-      List<Restaurant> restaurants, String keywords) {
+  static List<RestaurantLocal> filterByKeywords(
+      List<RestaurantLocal> restaurants, String keywords) {
     final String lowerCasedKeywords = keywords.toLowerCase();
     return restaurants
         .where((element) =>
@@ -27,7 +27,7 @@ class RestaurantDataSource {
         .toList();
   }
 
-  static Future<List<Restaurant>> fetchRestaurantList(
+  static Future<List<RestaurantLocal>> fetchRestaurantList(
     BuildContext context, {
     String keywords = "",
   }) async {
@@ -38,8 +38,8 @@ class RestaurantDataSource {
     }
 
     final Map<String, dynamic> parsedJson = jsonDecode(mData);
-    List<Restaurant> restaurantList = (parsedJson["restaurants"] as List)
-        .map((item) => Restaurant.fromJson(item))
+    List<RestaurantLocal> restaurantList = (parsedJson["restaurants"] as List)
+        .map((item) => RestaurantLocal.fromJson(item))
         .toList();
 
     if (keywords != "") {
@@ -49,9 +49,9 @@ class RestaurantDataSource {
     return restaurantList;
   }
 
-  static Future<Restaurant> fetchRestaurantById(
+  static Future<RestaurantLocal> fetchRestaurantById(
       BuildContext context, String id) async {
-    final List<Restaurant> restaurantList = await fetchRestaurantList(context);
+    final List<RestaurantLocal> restaurantList = await fetchRestaurantList(context);
     return restaurantList.firstWhere((element) => element.id == id);
   }
 }

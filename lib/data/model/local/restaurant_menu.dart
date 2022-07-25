@@ -1,20 +1,20 @@
-class RestaurantMenu {
-  RestaurantMenu({required this.foods, required this.drinks});
+class RestaurantMenuLocal {
+  RestaurantMenuLocal({required this.foods, required this.drinks});
 
-  final List<RestaurantMenuItem> foods;
-  final List<RestaurantMenuItem> drinks;
+  final List<RestaurantMenuItemLocal> foods;
+  final List<RestaurantMenuItemLocal> drinks;
 
-  RestaurantMenu.fromJson(Map<String, dynamic>? json)
+  RestaurantMenuLocal.fromJson(Map<String, dynamic>? json)
       : foods = ((json?["foods"] ?? []) as List)
-            .map((item) => RestaurantMenuItem.fromJson(item))
+            .map((item) => RestaurantMenuItemLocal.fromJson(item))
             .toList(),
         drinks = ((json?["drinks"] ?? []) as List)
-            .map((item) => RestaurantMenuItem.fromJson(item))
+            .map((item) => RestaurantMenuItemLocal.fromJson(item))
             .toList();
 }
 
-class RestaurantMenuItem {
-  RestaurantMenuItem({
+class RestaurantMenuItemLocal {
+  RestaurantMenuItemLocal({
     required this.name,
     required this.imageUrl,
     required this.price,
@@ -24,7 +24,7 @@ class RestaurantMenuItem {
   final String imageUrl;
   final String price;
 
-  RestaurantMenuItem.fromJson(Map<String, dynamic>? json)
+  RestaurantMenuItemLocal.fromJson(Map<String, dynamic>? json)
       : name = json?["name"] ?? "",
         imageUrl = json?["imageUrl"] ?? "",
         price = json?["price"] ?? "";
