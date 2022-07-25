@@ -30,5 +30,5 @@ class RestaurantApp extends StatelessWidget {
 
   String get _getTitle => "Restaurant App";
 
-  String get _initialRoute => "/";
+  String get _initialRoute => Routes.home;
 }

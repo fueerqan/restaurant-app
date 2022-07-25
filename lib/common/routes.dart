@@ -10,3 +10,8 @@ Map<String, WidgetBuilder> getRoutes(DataSource source) => {
           : const Network.RestaurantListPage(),
       "/local-detail": (context) => const RestaurantDetailPage(),
     };
+
+class Routes {
+  static const String home = "/";
+  static const String localDetail = "/local-detail";
+}

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:restaurant_app/common/routes.dart';
 import 'package:restaurant_app/data/model/local/restaurant.dart';
 import 'package:restaurant_app/data/model/ui/restaurant.dart';
 import 'package:restaurant_app/data/restaurant_data_source.dart';
@@ -109,7 +110,7 @@ class _RestaurantListPageState extends State<RestaurantListPage> {
                             RestaurantUiModel.fromLocal(restaurantData[index]),
                         onTap: () {
                           Navigator.of(context).pushNamed(
-                            "/detail",
+                            Routes.localDetail,
                             arguments: restaurantData[index].id,
                           );
                         },
