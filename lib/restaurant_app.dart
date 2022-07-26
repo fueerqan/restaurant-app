@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:restaurant_app/common/data_source.dart';
 import 'package:restaurant_app/common/routes.dart';
 import 'package:restaurant_app/common/styles.dart';
@@ -18,12 +19,22 @@ class RestaurantApp extends StatelessWidget {
         theme: getThemeData,
         initialRoute: _initialRoute,
         routes: getRoutes(dataSource),
+        localizationsDelegates: const [
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+        ],
       ),
       iOSBuilder: CupertinoApp(
         title: _getTitle,
         theme: getCupertinoThemeData,
         initialRoute: _initialRoute,
         routes: getRoutes(dataSource),
+        localizationsDelegates: const [
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+        ],
       ),
     );
   }

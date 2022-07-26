@@ -29,6 +29,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter        
   http: ^0.13.4
   bloc: ^8.0.3
   flutter_bloc: ^8.0.1
