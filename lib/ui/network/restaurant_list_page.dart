@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:restaurant_app/blocs/list/list_bloc.dart';
+import 'package:restaurant_app/common/routes.dart';
 import 'package:restaurant_app/widgets/platforms/platform_widget_builder.dart';
 import 'package:restaurant_app/widgets/restaurant_item.dart';
 
@@ -120,7 +121,7 @@ class _RestaurantListPageState extends State<RestaurantListPage> {
                         restaurant: state.restaurantList[index],
                         onTap: () {
                           Navigator.of(context).pushNamed(
-                            "/detail",
+                            Routes.networkDetail,
                             arguments: state.restaurantList[index].id,
                           );
                         },

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:restaurant_app/common/data_source.dart';
+import 'package:restaurant_app/domain/restaurant_detail_usecase.dart';
 import 'package:restaurant_app/domain/restaurant_list_usecase.dart';
 import 'package:restaurant_app/restaurant_app.dart';
 import 'package:get_it/get_it.dart';
@@ -15,4 +16,6 @@ void main() {
 void initApp() {
   final getIt = GetIt.instance;
   getIt.registerFactory<RestaurantListUsecase>(() => RestaurantListUsecase());
+  getIt.registerFactory<RestaurantDetailUsecase>(
+      () => RestaurantDetailUsecase());
 }

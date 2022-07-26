@@ -13,9 +13,26 @@ class ApiService {
       return NetworkResponse.fromJson(
           json.decode(response.body), "restaurants");
     } else {
-      return NetworkResponse(
+      return const NetworkResponse(
           error: true,
           message: "Failed to load Restaurant List!",
+          count: 0,
+          founded: 0,
+          data: null);
+    }
+  }
+
+  static Future<NetworkResponse> fetchRestaurantDetails(String id) async {
+    final response = await NetworkService.get(
+      Uri.parse(Url.baseUrl + Url.path_detail.replaceFirst("{id}", id)),
+    );
+
+    if (response.statusCode == 200) {
+      return NetworkResponse.fromJson(json.decode(response.body), "restaurant");
+    } else {
+      return NetworkResponse(
+          error: true,
+          message: "Failed to load Restaurant Detail with ID $id!",
           count: 0,
           founded: 0,
           data: null);
