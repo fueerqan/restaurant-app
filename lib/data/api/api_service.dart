@@ -6,16 +6,25 @@ import 'package:restaurant_app/data/model/network/network_response.dart';
 
 class ApiService {
   static Future<NetworkResponse> fetchRestaurantList() async {
-    final response =
-        await NetworkService.get(Uri.parse(Url.baseUrl + Url.path_list));
+    try {
+      final response =
+          await NetworkService.get(Uri.parse(Url.baseUrl + Url.path_list));
 
-    if (response.statusCode == 200) {
-      return NetworkResponse.fromJson(
-          json.decode(response.body), "restaurants");
-    } else {
+      if (response.statusCode == 200) {
+        return NetworkResponse.fromJson(
+            json.decode(response.body), "restaurants");
+      } else {
+        return const NetworkResponse(
+            error: true,
+            message: "Failed to load Restaurant List!",
+            count: 0,
+            founded: 0,
+            data: null);
+      }
+    } on Exception catch (e) {
       return const NetworkResponse(
           error: true,
-          message: "Failed to load Restaurant List!",
+          message: "Failed to load data, check your internet connection!",
           count: 0,
           founded: 0,
           data: null);
@@ -23,20 +32,29 @@ class ApiService {
   }
 
   static Future<NetworkResponse> searchRestaurants(String query) async {
-    String formattedQuery = query.replaceAll(" ", "+");
-    final response = await NetworkService.get(
-      Uri.parse(
-        Url.baseUrl + Url.path_search.replaceFirst("{query}", formattedQuery),
-      ),
-    );
+    try {
+      String formattedQuery = query.replaceAll(" ", "+");
+      final response = await NetworkService.get(
+        Uri.parse(
+          Url.baseUrl + Url.path_search.replaceFirst("{query}", formattedQuery),
+        ),
+      );
 
-    if (response.statusCode == 200) {
-      return NetworkResponse.fromJson(
-          json.decode(response.body), "restaurants");
-    } else {
+      if (response.statusCode == 200) {
+        return NetworkResponse.fromJson(
+            json.decode(response.body), "restaurants");
+      } else {
+        return const NetworkResponse(
+            error: true,
+            message: "Failed to search Restaurant List!",
+            count: 0,
+            founded: 0,
+            data: null);
+      }
+    } on Exception catch (e) {
       return const NetworkResponse(
           error: true,
-          message: "Failed to search Restaurant List!",
+          message: "Failed to load data, check your internet connection!",
           count: 0,
           founded: 0,
           data: null);
@@ -44,16 +62,27 @@ class ApiService {
   }
 
   static Future<NetworkResponse> fetchRestaurantDetails(String id) async {
-    final response = await NetworkService.get(
-      Uri.parse(Url.baseUrl + Url.path_detail.replaceFirst("{id}", id)),
-    );
+    try {
+      final response = await NetworkService.get(
+        Uri.parse(Url.baseUrl + Url.path_detail.replaceFirst("{id}", id)),
+      );
 
-    if (response.statusCode == 200) {
-      return NetworkResponse.fromJson(json.decode(response.body), "restaurant");
-    } else {
+      if (response.statusCode == 200) {
+        return NetworkResponse.fromJson(
+            json.decode(response.body), "restaurant");
+      } else {
+        return NetworkResponse(
+            error: true,
+            message: "Failed to load Restaurant Detail with ID $id!",
+            count: 0,
+            founded: 0,
+            data: null);
+      }
+    } on Exception catch (e) {
       return NetworkResponse(
           error: true,
-          message: "Failed to load Restaurant Detail with ID $id!",
+          message:
+              "Failed to load Restaurant Detail with ID $id, check your internet connection!",
           count: 0,
           founded: 0,
           data: null);
