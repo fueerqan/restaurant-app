@@ -132,11 +132,19 @@ class _RestaurantFavoritePageState extends State<RestaurantFavoritePage> {
         shrinkWrap: true,
         itemBuilder: (context, index) => RestaurantItem(
           restaurant: state.restaurantList[index],
-          onTap: () {
-            Navigator.of(context).pushNamed(
+          onTap: () async {
+            await Navigator.of(context).pushNamed(
               Routes.networkDetail,
               arguments: state.restaurantList[index].id,
             );
+
+            try {
+              // ignore: use_build_context_synchronously
+              final bloc = BlocProvider.of<FavoriteBloc>(context);
+              bloc.add(FavoriteFetchListEvent());
+            } on Exception {
+              /// do nothing, just prevent crash
+            }
           },
         ),
         separatorBuilder: (context, index) => const SizedBox(height: 8),
