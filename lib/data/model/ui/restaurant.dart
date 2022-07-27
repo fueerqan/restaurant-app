@@ -1,3 +1,4 @@
+import 'package:restaurant_app/common/database/database_helper.dart';
 import 'package:restaurant_app/common/url.dart';
 import 'package:restaurant_app/data/model/local/restaurant.dart';
 import 'package:restaurant_app/data/model/network/restaurant.dart';
@@ -40,4 +41,21 @@ class RestaurantUiModel {
             .replaceFirst("{pictureId}", restaurant.pictureId),
         city = restaurant.city,
         rating = restaurant.rating;
+
+  RestaurantUiModel.fromDatabase(Map<String, dynamic>? dbData)
+      : id = dbData?[DatabaseHelper.columnId],
+        name = dbData?[DatabaseHelper.columnName],
+        desciption = "",
+        pictureId = "",
+        pictureUrl = dbData?[DatabaseHelper.columnImage],
+        city = dbData?[DatabaseHelper.columnLocation],
+        rating = dbData?[DatabaseHelper.columnRating];
+
+  Map<String, dynamic> toMap() => {
+        DatabaseHelper.columnId: id,
+        DatabaseHelper.columnName: name,
+        DatabaseHelper.columnImage: pictureUrl,
+        DatabaseHelper.columnLocation: city,
+        DatabaseHelper.columnRating: rating
+      };
 }
