@@ -1,19 +1,19 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:restaurant_app/blocs/list/list_bloc.dart';
+import 'package:restaurant_app/blocs/favorite/favorite_bloc.dart';
 import 'package:restaurant_app/common/routes.dart';
 import 'package:restaurant_app/widgets/platforms/platform_widget_builder.dart';
 import 'package:restaurant_app/widgets/restaurant_item.dart';
 
-class RestaurantListPage extends StatefulWidget {
-  const RestaurantListPage({Key? key}) : super(key: key);
+class RestaurantFavoritePage extends StatefulWidget {
+  const RestaurantFavoritePage({Key? key}) : super(key: key);
 
   @override
-  State<RestaurantListPage> createState() => _RestaurantListPageState();
+  State<RestaurantFavoritePage> createState() => _RestaurantFavoritePageState();
 }
 
-class _RestaurantListPageState extends State<RestaurantListPage> {
+class _RestaurantFavoritePageState extends State<RestaurantFavoritePage> {
   static const int _minCharsToSearch = 3;
 
   bool isSearching = false;
@@ -33,10 +33,6 @@ class _RestaurantListPageState extends State<RestaurantListPage> {
     });
   }
 
-  void _onFavoriteTapped(BuildContext context) {
-    Navigator.of(context).pushNamed(Routes.favoriteList);
-  }
-
   void _onCloseSearch(BuildContext context) {
     _searchController.text = "";
     setState(() {
@@ -44,20 +40,20 @@ class _RestaurantListPageState extends State<RestaurantListPage> {
     });
     if (keywords.length >= _minCharsToSearch) {
       keywords = "";
-      ListBloc bloc = BlocProvider.of<ListBloc>(context);
-      bloc.add(FetchRestaurantListEvent());
+      FavoriteBloc bloc = BlocProvider.of<FavoriteBloc>(context);
+      // bloc.add(FetchRestaurantListEvent());
     }
   }
 
   void _onSearching(BuildContext context, String words) {
-    ListBloc bloc = BlocProvider.of<ListBloc>(context);
+    FavoriteBloc bloc = BlocProvider.of<FavoriteBloc>(context);
     if (words.length >= _minCharsToSearch) {
       keywords = words;
-      bloc.add(SearchRestaurantListEvent(words));
+      // bloc.add(SearchRestaurantListEvent(words));
     } else if (_searchController.text != "" &&
         keywords.length >= _minCharsToSearch) {
       keywords = words;
-      bloc.add(FetchRestaurantListEvent());
+      // bloc.add(FetchRestaurantListEvent());
     }
   }
 
@@ -74,8 +70,8 @@ class _RestaurantListPageState extends State<RestaurantListPage> {
   }
 
   Widget _buildBody(BuildContext context) => BlocProvider(
-        create: (_) => ListBloc()..add(FetchRestaurantListEvent()),
-        child: BlocBuilder<ListBloc, ListState>(
+        create: (_) => FavoriteBloc()..add(FavoriteFetchListEvent()),
+        child: BlocBuilder<FavoriteBloc, FavoriteState>(
           builder: (blocContext, state) {
             return Container(
               padding: const EdgeInsets.only(
@@ -89,24 +85,18 @@ class _RestaurantListPageState extends State<RestaurantListPage> {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   Text(
-                    "Restaurant",
+                    "Favorites",
                     style: Theme.of(context).textTheme.headline4?.copyWith(
                           color: Colors.black,
                           fontWeight: FontWeight.bold,
                         ),
                   ),
-                  Text(
-                    "Recommendation restaurant for you",
-                    style: Theme.of(context)
-                        .textTheme
-                        .subtitle1
-                        ?.copyWith(color: Colors.grey),
-                  ),
                   const SizedBox(height: 16),
                   _buildSearchView(blocContext),
-                  if (state is ListFailedState) _buildFailedView(state),
-                  if (state is ListSuccessState) _buildSuccessView(state),
-                  if (!(state is ListFailedState || state is ListSuccessState))
+                  if (state is FavoriteFailedState) _buildFailedView(state),
+                  if (state is FavoriteSuccessState) _buildSuccessView(state),
+                  if (!(state is FavoriteFailedState ||
+                      state is FavoriteSuccessState))
                     _buildLoadingView()
                 ],
               ),
@@ -121,13 +111,13 @@ class _RestaurantListPageState extends State<RestaurantListPage> {
     );
   }
 
-  Expanded _buildSuccessView(ListSuccessState state) {
+  Expanded _buildSuccessView(FavoriteSuccessState state) {
     if (state.restaurantList.isEmpty) {
       return Expanded(
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Text(
-            "No restaurants available.",
+            "No favorite restaurants available.",
             textAlign: TextAlign.center,
             style: Theme.of(context).textTheme.bodyText1?.copyWith(
                   fontSize: 16,
@@ -155,7 +145,7 @@ class _RestaurantListPageState extends State<RestaurantListPage> {
     );
   }
 
-  Expanded _buildFailedView(ListFailedState state) {
+  Expanded _buildFailedView(FavoriteFailedState state) {
     return Expanded(
       child: Center(
         child: Text(
@@ -198,28 +188,17 @@ class _RestaurantListPageState extends State<RestaurantListPage> {
     } else {
       return Align(
         alignment: Alignment.centerRight,
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            PlatformWidgetBuilder(
-              iOSBuilder: GestureDetector(
-                onTap: _onSearchTapped,
-                child: const Material(
-                  child: Icon(CupertinoIcons.search, size: 32),
-                ),
-              ),
-              androidBuilder: InkWell(
-                onTap: _onSearchTapped,
-                child: const Icon(Icons.search, size: 32),
-              ),
+        child: PlatformWidgetBuilder(
+          iOSBuilder: GestureDetector(
+            onTap: _onSearchTapped,
+            child: const Material(
+              child: Icon(CupertinoIcons.search, size: 32),
             ),
-            InkWell(
-              onTap: () {
-                _onFavoriteTapped(context);
-              },
-              child: const Icon(Icons.favorite, size: 32),
-            ),
-          ],
+          ),
+          androidBuilder: InkWell(
+            onTap: _onSearchTapped,
+            child: const Icon(Icons.search, size: 32),
+          ),
         ),
       );
     }

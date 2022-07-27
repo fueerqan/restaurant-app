@@ -6,6 +6,7 @@ import 'package:restaurant_app/ui/local/restaurant_list_page.dart'
     as local_list;
 import 'package:restaurant_app/ui/network/restaurant_detail_page.dart'
     as network_detail;
+import 'package:restaurant_app/ui/network/restaurant_favorite_page.dart';
 import 'package:restaurant_app/ui/network/restaurant_list_page.dart'
     as network_list;
 
@@ -16,11 +17,13 @@ Map<String, WidgetBuilder> getRoutes(DataSource source) => {
       Routes.localDetail: (context) =>
           const local_detail.RestaurantDetailPage(),
       Routes.networkDetail: (context) =>
-          const network_detail.RestaurantDetailPage()
+          const network_detail.RestaurantDetailPage(),
+      Routes.favoriteList: (context) => const RestaurantFavoritePage(),
     };
 
 class Routes {
   static const String home = "/";
   static const String localDetail = "/local-detail";
   static const String networkDetail = "/network-detail";
+  static const String favoriteList = "/favorites";
 }
