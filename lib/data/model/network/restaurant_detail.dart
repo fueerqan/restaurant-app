@@ -22,7 +22,7 @@ class RestaurantDetailNetwork {
   final String pictureUrl;
   final String city;
   final num rating;
-  final bool isFavorite;
+  bool isFavorite;
   final List<RestaurantDetailNameNetwork> categories;
   final RestaurantDetailMenuNetwork menus;
   final List<RestaurantDetailReviewNetwork> reviews;

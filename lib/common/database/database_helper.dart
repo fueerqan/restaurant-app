@@ -1,4 +1,5 @@
 import 'package:restaurant_app/data/model/ui/restaurant.dart';
+import 'package:restaurant_app/widgets/restaurant_item.dart';
 import 'package:sqflite/sqflite.dart';
 
 class DatabaseHelper {
@@ -53,6 +54,26 @@ class DatabaseHelper {
     final Database db = await database;
     List<Map<String, dynamic>> data = await db.query(_tableName);
     return data.map((e) => RestaurantUiModel.fromDatabase(e)).toList();
+  }
+
+  Future<RestaurantUiModel> getFavoriteRestaurantById(String id) async {
+    final Database db = await database;
+    List<Map<String, dynamic>> results = await db.query(
+      _tableName,
+      where: 'id = ?',
+      whereArgs: [id],
+    );
+
+    return results.map((res) => RestaurantUiModel.fromDatabase(res)).first;
+  }
+
+  Future<bool> isFavoriteRestaurant(String id) async {
+    try {
+      await getFavoriteRestaurantById(id);
+      return true;
+    } on StateError {
+      return false;
+    }
   }
 
   Future<int> removeFavorite(String id) async {

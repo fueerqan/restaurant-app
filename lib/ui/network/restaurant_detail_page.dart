@@ -14,6 +14,19 @@ import 'package:restaurant_app/widgets/restaurant_menu_item.dart' as RestoMenu;
 class RestaurantDetailPage extends StatelessWidget {
   const RestaurantDetailPage({Key? key}) : super(key: key);
 
+  void _onFavoriteTapped(
+    BuildContext context,
+    RestaurantDetailNetwork restaurantData,
+  ) {
+    final bloc = BlocProvider.of<DetailBloc>(context);
+
+    if (restaurantData.isFavorite) {
+      bloc.add(RemoveFromFavoriteEvent(restaurantData));
+    } else {
+      bloc.add(AddToFavoriteEvent(restaurantData));
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     /// get restaurant id
@@ -96,7 +109,12 @@ class RestaurantDetailPage extends StatelessWidget {
                 Positioned(
                   right: 16,
                   bottom: 0,
-                  child: _buildFavoriteButton(restaurant.isFavorite),
+                  child: _buildFavoriteButton(
+                    context,
+                    state.details,
+                    restaurant.isFavorite,
+                    state.isLoadingFavorite,
+                  ),
                 ),
               ],
             ),
@@ -258,18 +276,28 @@ class RestaurantDetailPage extends StatelessWidget {
     );
   }
 
-  Widget _buildFavoriteButton(bool isFavorite) {
+  Widget _buildFavoriteButton(
+    BuildContext context,
+    RestaurantDetailNetwork details,
+    bool isFavorite,
+    bool isLoading,
+  ) {
     return Material(
       elevation: 4,
       borderRadius: const BorderRadius.all(Radius.circular(25)),
       color: Colors.white,
       child: Padding(
         padding: const EdgeInsets.all(8),
-        child: Icon(
-          Icons.favorite,
-          size: 32,
-          color: isFavorite ? Colors.red : Colors.grey,
-        ),
+        child: isLoading
+            ? const CircularProgressIndicator()
+            : GestureDetector(
+                onTap: () => _onFavoriteTapped(context, details),
+                child: Icon(
+                  Icons.favorite,
+                  size: 32,
+                  color: isFavorite ? Colors.red : Colors.grey,
+                ),
+              ),
       ),
     );
   }

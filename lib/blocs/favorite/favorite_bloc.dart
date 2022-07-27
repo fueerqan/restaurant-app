@@ -1,6 +1,5 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
 import 'package:restaurant_app/common/database/database_helper.dart';
 import 'package:restaurant_app/data/model/ui/restaurant.dart';
 
