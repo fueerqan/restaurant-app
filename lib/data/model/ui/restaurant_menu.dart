@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
 
 class RestaurantMenuUiModel extends Equatable {
-  RestaurantMenuUiModel({
+  const RestaurantMenuUiModel({
     required this.name,
     required this.imageUrl,
     required this.price,

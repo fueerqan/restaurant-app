@@ -21,7 +21,7 @@ class ApiService {
             founded: 0,
             data: null);
       }
-    } on Exception catch (e) {
+    } on Exception {
       return const NetworkResponse(
           error: true,
           message: "Failed to load data, check your internet connection!",
@@ -51,7 +51,7 @@ class ApiService {
             founded: 0,
             data: null);
       }
-    } on Exception catch (e) {
+    } on Exception {
       return const NetworkResponse(
           error: true,
           message: "Failed to load data, check your internet connection!",
@@ -78,7 +78,7 @@ class ApiService {
             founded: 0,
             data: null);
       }
-    } on Exception catch (e) {
+    } on Exception {
       return NetworkResponse(
           error: true,
           message:
