@@ -81,12 +81,24 @@ class RestaurantDetailPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            ClipRRect(
-              borderRadius: const BorderRadius.only(
-                bottomLeft: Radius.circular(10),
-                bottomRight: Radius.circular(10),
-              ),
-              child: Image.network(restaurant.pictureUrl),
+            Stack(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 20),
+                  child: ClipRRect(
+                    borderRadius: const BorderRadius.only(
+                      bottomLeft: Radius.circular(10),
+                      bottomRight: Radius.circular(10),
+                    ),
+                    child: Image.network(restaurant.pictureUrl),
+                  ),
+                ),
+                Positioned(
+                  right: 16,
+                  bottom: 0,
+                  child: _buildFavoriteButton(restaurant.isFavorite),
+                ),
+              ],
             ),
             _paddingWidget(
               Text(
@@ -241,6 +253,22 @@ class RestaurantDetailPage extends StatelessWidget {
                   .toList(),
             ),
           ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildFavoriteButton(bool isFavorite) {
+    return Material(
+      elevation: 4,
+      borderRadius: const BorderRadius.all(Radius.circular(25)),
+      color: Colors.white,
+      child: Padding(
+        padding: const EdgeInsets.all(8),
+        child: Icon(
+          Icons.favorite,
+          size: 32,
+          color: isFavorite ? Colors.red : Colors.grey,
         ),
       ),
     );

@@ -9,6 +9,7 @@ class RestaurantDetailNetwork {
     required this.pictureUrl,
     required this.city,
     required this.rating,
+    this.isFavorite = false,
     required this.categories,
     required this.menus,
     required this.reviews,
@@ -21,6 +22,7 @@ class RestaurantDetailNetwork {
   final String pictureUrl;
   final String city;
   final num rating;
+  final bool isFavorite;
   final List<RestaurantDetailNameNetwork> categories;
   final RestaurantDetailMenuNetwork menus;
   final List<RestaurantDetailReviewNetwork> reviews;
@@ -34,6 +36,7 @@ class RestaurantDetailNetwork {
             .replaceFirst("{pictureId}", json?["pictureId"] ?? ""),
         city = json?["city"] ?? "",
         rating = json?["rating"] ?? 0.0,
+        isFavorite = json?["isFavorite"] ?? false,
         categories = ((json?["categories"] ?? []) as List)
             .map((e) => RestaurantDetailNameNetwork.fromJson(e))
             .toList(),
