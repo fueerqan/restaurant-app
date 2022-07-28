@@ -14,7 +14,13 @@ class FavoriteFailedState extends FavoriteState {
 }
 
 class FavoriteSuccessState extends FavoriteState {
-  FavoriteSuccessState(this.restaurantList);
+  FavoriteSuccessState(
+    this.restaurantList, {
+    this.shouldShowSnackbar = false,
+    this.snackBarMessage = "",
+  });
 
   final List<RestaurantUiModel> restaurantList;
+  final bool shouldShowSnackbar;
+  final String snackBarMessage;
 }

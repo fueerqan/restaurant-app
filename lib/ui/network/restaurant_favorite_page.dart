@@ -94,7 +94,8 @@ class _RestaurantFavoritePageState extends State<RestaurantFavoritePage> {
                   const SizedBox(height: 16),
                   _buildSearchView(blocContext),
                   if (state is FavoriteFailedState) _buildFailedView(state),
-                  if (state is FavoriteSuccessState) _buildSuccessView(state),
+                  if (state is FavoriteSuccessState)
+                    _buildSuccessView(blocContext, state),
                   if (!(state is FavoriteFailedState ||
                       state is FavoriteSuccessState))
                     _buildLoadingView()
@@ -111,7 +112,22 @@ class _RestaurantFavoritePageState extends State<RestaurantFavoritePage> {
     );
   }
 
-  Expanded _buildSuccessView(FavoriteSuccessState state) {
+  Expanded _buildSuccessView(
+      BuildContext blocContext, FavoriteSuccessState state) {
+    if (state.shouldShowSnackbar) {
+      Future.microtask(
+        () => ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(state.snackBarMessage),
+            backgroundColor:
+                (state.snackBarMessage.toLowerCase().contains("success"))
+                    ? Colors.green
+                    : Colors.red,
+          ),
+        ),
+      );
+    }
+
     if (state.restaurantList.isEmpty) {
       return Expanded(
         child: Padding(
@@ -130,22 +146,44 @@ class _RestaurantFavoritePageState extends State<RestaurantFavoritePage> {
       child: ListView.separated(
         padding: const EdgeInsets.only(top: 16, bottom: 16),
         shrinkWrap: true,
-        itemBuilder: (context, index) => RestaurantItem(
-          restaurant: state.restaurantList[index],
-          onTap: () async {
-            await Navigator.of(context).pushNamed(
-              Routes.networkDetail,
-              arguments: state.restaurantList[index].id,
-            );
-
-            try {
-              // ignore: use_build_context_synchronously
-              final bloc = BlocProvider.of<FavoriteBloc>(context);
-              bloc.add(FavoriteFetchListEvent());
-            } on Exception {
-              /// do nothing, just prevent crash
-            }
+        itemBuilder: (context, index) => Dismissible(
+          key: Key(state.restaurantList[index].id),
+          onDismissed: (direction) {
+            final restaurant = state.restaurantList[index];
+            final bloc = BlocProvider.of<FavoriteBloc>(context);
+            bloc.add(RemoveFavoriteRestaurantEvent(
+              restaurant.id,
+              restaurant.name,
+            ));
           },
+          background: Container(
+            color: Colors.red,
+            padding: const EdgeInsets.all(16),
+            child: const Align(
+              alignment: Alignment.centerRight,
+              child: Icon(
+                Icons.delete,
+                color: Colors.white,
+              ),
+            ),
+          ),
+          child: RestaurantItem(
+            restaurant: state.restaurantList[index],
+            onTap: () async {
+              await Navigator.of(context).pushNamed(
+                Routes.networkDetail,
+                arguments: state.restaurantList[index].id,
+              );
+
+              try {
+                // ignore: use_build_context_synchronously
+                final bloc = BlocProvider.of<FavoriteBloc>(context);
+                bloc.add(FavoriteFetchListEvent());
+              } on Exception {
+                /// do nothing, just prevent crash
+              }
+            },
+          ),
         ),
         separatorBuilder: (context, index) => const SizedBox(height: 8),
         itemCount: state.restaurantList.length,
