@@ -53,7 +53,7 @@ class DatabaseHelper {
   Future<List<RestaurantUiModel>> getFavoriteRestaurants() async {
     final Database db = await database;
     List<Map<String, dynamic>> data = await db.query(_tableName);
-    return data.map((e) => RestaurantUiModel.fromDatabase(e)).toList();
+    return data.map((e) => RestaurantUiModel.fromMap(e)).toList();
   }
 
   Future<RestaurantUiModel> getFavoriteRestaurantById(String id) async {
@@ -64,7 +64,7 @@ class DatabaseHelper {
       whereArgs: [id],
     );
 
-    return results.map((res) => RestaurantUiModel.fromDatabase(res)).first;
+    return results.map((res) => RestaurantUiModel.fromMap(res)).first;
   }
 
   Future<bool> isFavoriteRestaurant(String id) async {

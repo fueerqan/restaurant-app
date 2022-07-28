@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:restaurant_app/common/data_source.dart';
+import 'package:restaurant_app/common/navigation.dart';
 import 'package:restaurant_app/common/routes.dart';
 import 'package:restaurant_app/common/styles.dart';
 import 'package:restaurant_app/widgets/platforms/platform_widget_builder.dart';
@@ -18,6 +19,7 @@ class RestaurantApp extends StatelessWidget {
         title: _getTitle,
         theme: getThemeData,
         initialRoute: _initialRoute,
+        navigatorKey: navigatorKey,
         routes: getRoutes(dataSource),
         localizationsDelegates: const [
           GlobalMaterialLocalizations.delegate,
@@ -29,6 +31,7 @@ class RestaurantApp extends StatelessWidget {
         title: _getTitle,
         theme: getCupertinoThemeData,
         initialRoute: _initialRoute,
+        navigatorKey: navigatorKey,
         routes: getRoutes(dataSource),
         localizationsDelegates: const [
           GlobalMaterialLocalizations.delegate,

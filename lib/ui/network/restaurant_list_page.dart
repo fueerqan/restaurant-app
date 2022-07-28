@@ -219,6 +219,12 @@ class _RestaurantListPageState extends State<RestaurantListPage> {
               },
               child: const Icon(Icons.favorite, size: 32),
             ),
+            InkWell(
+              onTap: () {
+                Navigator.of(context).pushNamed(Routes.settings);
+              },
+              child: const Icon(Icons.settings, size: 32),
+            ),
           ],
         ),
       );

@@ -1,11 +1,11 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
-import 'package:restaurant_app/common/database/database_helper.dart';
 import 'package:restaurant_app/common/url.dart';
 import 'package:restaurant_app/data/model/network/restaurant_detail.dart';
 import 'package:restaurant_app/data/model/ui/restaurant.dart';
 import 'package:restaurant_app/domain/restaurant_detail_usecase.dart';
+import 'package:restaurant_app/utils/database/database_helper.dart';
 
 part 'detail_event.dart';
 part 'detail_state.dart';

@@ -1,7 +1,7 @@
-import 'package:restaurant_app/common/database/database_helper.dart';
 import 'package:restaurant_app/common/url.dart';
 import 'package:restaurant_app/data/model/local/restaurant.dart';
 import 'package:restaurant_app/data/model/network/restaurant.dart';
+import 'package:restaurant_app/utils/database/database_helper.dart';
 
 class RestaurantUiModel {
   RestaurantUiModel({
@@ -42,7 +42,7 @@ class RestaurantUiModel {
         city = restaurant.city,
         rating = restaurant.rating;
 
-  RestaurantUiModel.fromDatabase(Map<String, dynamic>? dbData)
+  RestaurantUiModel.fromMap(Map<String, dynamic>? dbData)
       : id = dbData?[DatabaseHelper.columnId],
         name = dbData?[DatabaseHelper.columnName],
         desciption = "",
