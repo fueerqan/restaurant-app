@@ -16,19 +16,11 @@ class SchedulingProvider extends ChangeNotifier {
         print('Scheduling Recommendation Restaurant Activated');
       }
       notifyListeners();
-      // return await AndroidAlarmManager.periodic(
-      //   const Duration(hours: 24),
-      //   1,
-      //   BackgroundService.callback,
-      //   startAt: DateTimeHelper.format(),
-      //   exact: true,
-      //   wakeup: true,
-      // );
       return await AndroidAlarmManager.periodic(
-        const Duration(minutes: 1),
-        alarmId,
+        const Duration(hours: 24),
+        1,
         BackgroundService.callback,
-        startAt: DateTime.now(),
+        startAt: DateTimeHelper.format(),
         exact: true,
         wakeup: true,
       );
