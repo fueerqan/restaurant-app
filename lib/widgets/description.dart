@@ -47,7 +47,7 @@ class _DescriptionState extends State<Description> {
             const SizedBox(height: 8),
           if (widget.description.length > minLengthToShowEllipsis)
             PlatformWidgetBuilder(
-              androidBuilder: InkWell(
+              androidBuilder: GestureDetector(
                 onTap: _onToggle,
                 child: _buildDescriptionToggle(context, isCollapsed),
               ),
